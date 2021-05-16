@@ -2,14 +2,13 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-img = cv.imread("images/group.jpg")
+img = cv.imread("../images/group.jpg")
 img = cv.resize(img, (500,500), interpolation=cv.INTER_AREA)
 # cv.imshow('Image', img)
 
 
 
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-# cv.imshow('gray', gray)
 
 
 # link haarcascades default
@@ -18,7 +17,7 @@ https://github.com/opencv/opencv/tree/master/data/haarcascades
 '''
 
 ## doc file xml (algorithms)
-haar_cascade = cv.CascadeClassifier('./haar_face.xml')
+haar_cascade = cv.CascadeClassifier('../face_recognize/haar_face.xml')
 
 faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=6)
 

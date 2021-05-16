@@ -13,7 +13,7 @@ face_recognizer = cv.face.LBPHFaceRecognizer_create()
 face_recognizer.read('face_trained.yml')
 
 # img = cv.imread('./Faces/val/jerry_seinfeld/5.jpg')
-img = cv.imread('./images/tier.jpeg')
+img = cv.imread('../images/tier.jpeg')
 
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 # cv.imshow('Person',gray)

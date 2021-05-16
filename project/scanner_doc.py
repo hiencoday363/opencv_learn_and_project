@@ -83,7 +83,7 @@ def getWarp(img, biggest):
     pts2 = np.float32([[0, 0], [width, 0], [0, height], [width, height]])
 
     matrix = cv.getPerspectiveTransform(pts1, pts2)
-
+    print('pts1', matrix)
     return cv.warpPerspective(img, matrix, (width, height))
 
 
@@ -102,9 +102,9 @@ if len(biggest)!=0:
 else:
     img_warp = img
 
-cv.imshow('background ',background)
+# cv.imshow('background ',background)
 cv.imshow('img_warp ',img_warp)
-cv.imshow('img_thres ',img_thres)
+# cv.imshow('img_thres ',img_thres)
 cv.imshow('img ',img)
 
 cv.waitKey(0)

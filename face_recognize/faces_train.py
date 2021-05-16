@@ -3,7 +3,7 @@ import cv2 as cv
 import numpy as np
 
 
-path = './Faces/train/'
+path = '../Faces/train/'
  
 haar_cascade = cv.CascadeClassifier('./haar_face.xml')
 
